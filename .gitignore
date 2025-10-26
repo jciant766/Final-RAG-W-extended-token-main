@@ -1,0 +1,28 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+.env
+chroma_db/
+.venv/
+venv/
+*.log
+.DS_Store
+Thumbs.db
+Sean-s-RAG-the-real-one/
+debug_logs/
+
+# Vector database files (built automatically on first run)
+processed_chunks.json
+processing_report.json
+
+# IMPORTANT: Make sure to commit all .txt files in ocr/output/
+# These are needed for the application to work on Streamlit Cloud
+!ocr/output/*.txt
+
+# Exclude parent directory files
+../../
+../../../*
+

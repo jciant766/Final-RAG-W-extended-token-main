@@ -1,0 +1,146 @@
+[
+  {
+    "question_number": 10,
+    "question": "What are the steps for holding an AGM?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 11,
+    "question": "How does a company change its name?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 12,
+    "question": "What is the procedure for increasing share capital?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 13,
+    "question": "How is bankruptcy declared?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 14,
+    "question": "What is the process for protesting a bill of exchange?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 15,
+    "question": "How are commercial disputes resolved?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 16,
+    "question": "What are the duties of company directors?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 17,
+    "question": "What are the reporting obligations for directors?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 18,
+    "question": "What conflicts of interest rules apply to directors?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 19,
+    "question": "What records must a company maintain?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 20,
+    "question": "What are the requirements for dividend distributions?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 21,
+    "question": "What are the requirements for a company to give financial assistance?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 22,
+    "question": "What are beneficial ownership register requirements?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 23,
+    "question": "Show me Article 4 of the Commercial Code",
+    "chunks_retrieved": 5,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": "Commercial Code (Cap. 13) Art. 4",
+    "has_overview": false
+  },
+  {
+    "question_number": 24,
+    "question": "What does Article 136A of the Companies Act say?",
+    "chunks_retrieved": 0,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": null,
+    "has_overview": false
+  },
+  {
+    "question_number": 25,
+    "question": "Find Article 123 about dividends",
+    "chunks_retrieved": 1,
+    "confidence": null,
+    "adaptive_retrieval_used": false,
+    "top_citation": "Companies Act (Cap. 386) Art. 123",
+    "has_overview": false
+  }
+]

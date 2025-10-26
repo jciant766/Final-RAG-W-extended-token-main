@@ -1,0 +1,719 @@
+[
+  {
+    "question_number": 10,
+    "question": "What are the steps for holding an AGM?",
+    "query_analysis": {
+      "type": "general",
+      "intent": "procedural",
+      "keywords": [
+        "steps",
+        "holding",
+        "agm"
+      ],
+      "article_num": null,
+      "doc_hint": null,
+      "doc_hint_explicit": false,
+      "original_query": "What are the steps for holding an AGM?"
+    },
+    "chunks_retrieved": 25,
+    "top_chunks": [
+      {
+        "citation": "S.L. 386.23 Reg. 5",
+        "score": 0.12639344262295082,
+        "source": "semantic",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 104",
+        "score": 0.12612903225806452,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 135",
+        "score": 0.11952651515151516,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 127A",
+        "score": 0.11930037313432837,
+        "source": "semantic",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 274",
+        "score": 0.11886775362318841,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      }
+    ],
+    "ai_overview": {
+      "confidence": 0.1240163300108435,
+      "adaptive_retrieval": true,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 11,
+    "question": "How does a company change its name?",
+    "query_analysis": {
+      "type": "general",
+      "intent": "procedural",
+      "keywords": [
+        "company",
+        "change",
+        "its",
+        "name"
+      ],
+      "article_num": null,
+      "doc_hint": "companies_act",
+      "doc_hint_explicit": false,
+      "original_query": "How does a company change its name?"
+    },
+    "chunks_retrieved": 25,
+    "top_chunks": [
+      {
+        "citation": "Companies Act (Cap. 386) Art. 107",
+        "score": 0.14327188940092167,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 329B",
+        "score": 0.1422943722943723,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 146",
+        "score": 0.14139344262295084,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 79",
+        "score": 0.13395604395604396,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 127A",
+        "score": 0.13306418219461696,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      }
+    ],
+    "ai_overview": {
+      "confidence": 0.14231990143941495,
+      "adaptive_retrieval": true,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 12,
+    "question": "What is the procedure for increasing share capital?",
+    "query_analysis": {
+      "type": "general",
+      "intent": "definition",
+      "keywords": [
+        "procedure",
+        "increasing",
+        "share",
+        "capital"
+      ],
+      "article_num": null,
+      "doc_hint": null,
+      "doc_hint_explicit": false,
+      "original_query": "What is the procedure for increasing share capital?"
+    },
+    "chunks_retrieved": 25,
+    "top_chunks": [
+      {
+        "citation": "Companies Act (Cap. 386) Art. 104",
+        "score": 0.133125,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 186",
+        "score": 0.13201844262295082,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 194",
+        "score": 0.13149801587301588,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 192",
+        "score": 0.12538461538461537,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 73",
+        "score": 0.12470588235294118,
+        "source": "semantic",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      }
+    ],
+    "ai_overview": {
+      "confidence": 0.13221381949865554,
+      "adaptive_retrieval": true,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 13,
+    "question": "How is bankruptcy declared?",
+    "query_analysis": {
+      "type": "general",
+      "intent": null,
+      "keywords": [
+        "bankruptcy",
+        "declared"
+      ],
+      "article_num": null,
+      "doc_hint": null,
+      "doc_hint_explicit": false,
+      "original_query": "How is bankruptcy declared?"
+    },
+    "chunks_retrieved": 0,
+    "top_chunks": [],
+    "ai_overview": {
+      "confidence": null,
+      "adaptive_retrieval": false,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 14,
+    "question": "What is the process for protesting a bill of exchange?",
+    "query_analysis": {
+      "type": "general",
+      "intent": "definition",
+      "keywords": [
+        "process",
+        "protesting",
+        "bill",
+        "exchange"
+      ],
+      "article_num": null,
+      "doc_hint": null,
+      "doc_hint_explicit": false,
+      "original_query": "What is the process for protesting a bill of exchange?"
+    },
+    "chunks_retrieved": 0,
+    "top_chunks": [],
+    "ai_overview": {
+      "confidence": null,
+      "adaptive_retrieval": false,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 15,
+    "question": "How are commercial disputes resolved?",
+    "query_analysis": {
+      "type": "general",
+      "intent": null,
+      "keywords": [
+        "disputes",
+        "resolved"
+      ],
+      "article_num": null,
+      "doc_hint": null,
+      "doc_hint_explicit": false,
+      "original_query": "How are commercial disputes resolved?"
+    },
+    "chunks_retrieved": 0,
+    "top_chunks": [],
+    "ai_overview": {
+      "confidence": null,
+      "adaptive_retrieval": false,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 16,
+    "question": "What are the duties of company directors?",
+    "query_analysis": {
+      "type": "general",
+      "intent": "requirement",
+      "keywords": [
+        "duties",
+        "company",
+        "directors"
+      ],
+      "article_num": null,
+      "doc_hint": "companies_act",
+      "doc_hint_explicit": false,
+      "original_query": "What are the duties of company directors?"
+    },
+    "chunks_retrieved": 25,
+    "top_chunks": [
+      {
+        "citation": "Companies Act (Cap. 386) Art. 176",
+        "score": 0.13139344262295083,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 137",
+        "score": 0.13112903225806452,
+        "source": "semantic",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 151",
+        "score": 0.13038461538461538,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 136A",
+        "score": 0.12496487119437939,
+        "source": "semantic",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 154",
+        "score": 0.1247004608294931,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      }
+    ],
+    "ai_overview": {
+      "confidence": 0.13096903008854358,
+      "adaptive_retrieval": true,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 17,
+    "question": "What are the reporting obligations for directors?",
+    "query_analysis": {
+      "type": "general",
+      "intent": "requirement",
+      "keywords": [
+        "reporting",
+        "obligations",
+        "directors"
+      ],
+      "article_num": null,
+      "doc_hint": "companies_act",
+      "doc_hint_explicit": false,
+      "original_query": "What are the reporting obligations for directors?"
+    },
+    "chunks_retrieved": 25,
+    "top_chunks": [
+      {
+        "citation": "Companies Act (Cap. 386) Art. 213B",
+        "score": 0.12496487119437939,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 179A",
+        "score": 0.12444444444444444,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "S.L. 386.14 Reg. 23",
+        "score": 0.11776785714285715,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "S.L. 386.13 Reg. 22",
+        "score": 0.11752747252747253,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "S.L. 386.15 Reg. 23",
+        "score": 0.1172943722943723,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      }
+    ],
+    "ai_overview": {
+      "confidence": 0.122392390927227,
+      "adaptive_retrieval": true,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 18,
+    "question": "What conflicts of interest rules apply to directors?",
+    "query_analysis": {
+      "type": "general",
+      "intent": null,
+      "keywords": [
+        "conflicts",
+        "interest",
+        "rules",
+        "apply",
+        "directors"
+      ],
+      "article_num": null,
+      "doc_hint": "companies_act",
+      "doc_hint_explicit": false,
+      "original_query": "What conflicts of interest rules apply to directors?"
+    },
+    "chunks_retrieved": 0,
+    "top_chunks": [],
+    "ai_overview": {
+      "confidence": null,
+      "adaptive_retrieval": false,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 19,
+    "question": "What records must a company maintain?",
+    "query_analysis": {
+      "type": "general",
+      "intent": null,
+      "keywords": [
+        "records",
+        "must",
+        "company",
+        "maintain"
+      ],
+      "article_num": null,
+      "doc_hint": "companies_act",
+      "doc_hint_explicit": false,
+      "original_query": "What records must a company maintain?"
+    },
+    "chunks_retrieved": 0,
+    "top_chunks": [],
+    "ai_overview": {
+      "confidence": null,
+      "adaptive_retrieval": false,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 20,
+    "question": "What are the requirements for dividend distributions?",
+    "query_analysis": {
+      "type": "general",
+      "intent": "requirement",
+      "keywords": [
+        "requirements",
+        "dividend",
+        "distributions"
+      ],
+      "article_num": null,
+      "doc_hint": "companies_act",
+      "doc_hint_explicit": false,
+      "original_query": "What are the requirements for dividend distributions?"
+    },
+    "chunks_retrieved": 25,
+    "top_chunks": [
+      {
+        "citation": "Companies Act (Cap. 386) Art. 198",
+        "score": 0.11853629976580796,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 194",
+        "score": 0.11827188940092166,
+        "source": "semantic",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 199",
+        "score": 0.11587301587301586,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 200",
+        "score": 0.11408450704225351,
+        "source": "semantic",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 197",
+        "score": 0.10944444444444443,
+        "source": "semantic",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      }
+    ],
+    "ai_overview": {
+      "confidence": 0.11756040167991516,
+      "adaptive_retrieval": true,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 21,
+    "question": "What are the requirements for a company to give financial assistance?",
+    "query_analysis": {
+      "type": "general",
+      "intent": "requirement",
+      "keywords": [
+        "requirements",
+        "company",
+        "give",
+        "financial",
+        "assistance"
+      ],
+      "article_num": null,
+      "doc_hint": "companies_act",
+      "doc_hint_explicit": false,
+      "original_query": "What are the requirements for a company to give financial assistance?"
+    },
+    "chunks_retrieved": 25,
+    "top_chunks": [
+      {
+        "citation": "Companies Act (Cap. 386) Art. 110",
+        "score": 0.1436661698956781,
+        "source": "semantic",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 425",
+        "score": 0.13810719131614654,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 3A",
+        "score": 0.12902097902097903,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 407",
+        "score": 0.12840175953079178,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 167",
+        "score": 0.11996392496392497,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      }
+    ],
+    "ai_overview": {
+      "confidence": 0.1369314467442679,
+      "adaptive_retrieval": true,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 22,
+    "question": "What are beneficial ownership register requirements?",
+    "query_analysis": {
+      "type": "general",
+      "intent": "requirement",
+      "keywords": [
+        "beneficial",
+        "ownership",
+        "register",
+        "requirements"
+      ],
+      "article_num": null,
+      "doc_hint": "companies_act",
+      "doc_hint_explicit": false,
+      "original_query": "What are beneficial ownership register requirements?"
+    },
+    "chunks_retrieved": 25,
+    "top_chunks": [
+      {
+        "citation": "Companies Act (Cap. 386) Art. 425",
+        "score": 0.11992537313432836,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 127A",
+        "score": 0.11889344262295082,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 127",
+        "score": 0.11862903225806451,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 292",
+        "score": 0.09288461538461538,
+        "source": "bm25",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "S.L. 386.22 Reg. 17",
+        "score": 0.09139344262295082,
+        "source": "semantic",
+        "cross_encoder_applied": true,
+        "doc_overview": "N/A..."
+      }
+    ],
+    "ai_overview": {
+      "confidence": 0.11914928267178122,
+      "adaptive_retrieval": true,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 23,
+    "question": "Show me Article 4 of the Commercial Code",
+    "query_analysis": {
+      "type": "article_lookup",
+      "intent": null,
+      "keywords": [],
+      "article_num": "4",
+      "doc_hint": "code_13",
+      "doc_hint_explicit": true,
+      "original_query": "Show me Article 4 of the Commercial Code"
+    },
+    "chunks_retrieved": 5,
+    "top_chunks": [
+      {
+        "citation": "Commercial Code (Cap. 13) Art. 4",
+        "score": 1.0,
+        "source": "semantic",
+        "cross_encoder_applied": false,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "Companies Act (Cap. 386) Art. 4",
+        "score": 1.0,
+        "source": "semantic",
+        "cross_encoder_applied": false,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "S.L. 386.02 Reg. 4",
+        "score": 1.0,
+        "source": "semantic",
+        "cross_encoder_applied": false,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "S.L. 386.05 Reg. 4",
+        "score": 1.0,
+        "source": "semantic",
+        "cross_encoder_applied": false,
+        "doc_overview": "N/A..."
+      },
+      {
+        "citation": "S.L. 386.06 Reg. 4",
+        "score": 1.0,
+        "source": "semantic",
+        "cross_encoder_applied": false,
+        "doc_overview": "N/A..."
+      }
+    ],
+    "ai_overview": {
+      "confidence": null,
+      "adaptive_retrieval": false,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 24,
+    "question": "What does Article 136A of the Companies Act say?",
+    "query_analysis": {
+      "type": "general",
+      "intent": null,
+      "keywords": [
+        "article",
+        "136a",
+        "companies",
+        "act",
+        "say"
+      ],
+      "article_num": null,
+      "doc_hint": "companies_act",
+      "doc_hint_explicit": true,
+      "original_query": "What does Article 136A of the Companies Act say?"
+    },
+    "chunks_retrieved": 0,
+    "top_chunks": [],
+    "ai_overview": {
+      "confidence": null,
+      "adaptive_retrieval": false,
+      "answer_length": 0
+    }
+  },
+  {
+    "question_number": 25,
+    "question": "Find Article 123 about dividends",
+    "query_analysis": {
+      "type": "article_lookup",
+      "intent": null,
+      "keywords": [],
+      "article_num": "123",
+      "doc_hint": "companies_act",
+      "doc_hint_explicit": false,
+      "original_query": "Find Article 123 about dividends"
+    },
+    "chunks_retrieved": 1,
+    "top_chunks": [
+      {
+        "citation": "Companies Act (Cap. 386) Art. 123",
+        "score": 1.0,
+        "source": "semantic",
+        "cross_encoder_applied": false,
+        "doc_overview": "N/A..."
+      }
+    ],
+    "ai_overview": {
+      "confidence": null,
+      "adaptive_retrieval": false,
+      "answer_length": 0
+    }
+  }
+]
