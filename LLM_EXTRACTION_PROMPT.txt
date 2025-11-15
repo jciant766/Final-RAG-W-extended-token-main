@@ -41,7 +41,8 @@ GROUPING RULES:
 - If 2-4 sequential articles share the same topic → GROUP them together
 - If an article is standalone or different topic → SEPARATE chunk
 - Each article MUST include ALL its sub-articles
-- Target: 150-400 tokens per group
+- NO TOKEN LIMITS - include complete articles regardless of length
+- NEVER split an article - legal integrity > chunk size
 
 EXAMPLE INPUT/OUTPUT:
 

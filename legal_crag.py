@@ -174,11 +174,11 @@ Your validation:"""
             content = doc.get('content', '')
             metadata = doc.get('metadata', {})
 
-            content_preview = content[:2000] if len(content) > 2000 else content
-
+            # Use full content - NO truncation to preserve legal context
+            # voyage-law-2 has 16K token context, can handle long articles
             prompt = self.GRADING_PROMPT.format(
                 question=question,
-                document=f"[{metadata.get('citation', 'Unknown')}]\n{content_preview}"
+                document=f"[{metadata.get('citation', 'Unknown')}]\n{content}"
             )
 
             response = self._call_llm(prompt, max_tokens=50)

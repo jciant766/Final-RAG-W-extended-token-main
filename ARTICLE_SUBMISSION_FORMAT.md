@@ -187,7 +187,7 @@ GROUPING RULES:
 - Group 2-4 sequential articles together IF they share the same topic
 - Separate articles that cover different topics
 - Each article must include ALL its sub-articles
-- Target 150-400 tokens per group
+- NO TOKEN LIMITS - include complete articles regardless of length
 
 Now process the following legal text:
 

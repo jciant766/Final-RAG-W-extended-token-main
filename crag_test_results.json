@@ -1,41 +1,26 @@
 {
-  "passed": 2,
-  "failed": 1,
+  "passed": 0,
+  "failed": 3,
   "total": 3,
-  "pass_rate": 0.6666666666666666,
+  "pass_rate": 0.0,
   "results": [
     {
       "test_id": "test_1",
       "question": "What is the definition of ownership according to Malta Civil Code Article 320?",
-      "answer": "According to [Civil Code Cap. 16, Article 320], ownership is explicitly defined as:\n\n\"Ownership is the right of enjoying and disposing of things in the most absolute manner, provided no use thereof is made which is prohibited by law.\"\n\nThis is a direct quote from the provided document that specifically defines ownership under Maltese civil law.",
-      "confidence": 1.0,
-      "grounded": true,
-      "citation_accuracy": 1.0,
-      "passed": true,
-      "issues": []
+      "error": "OpenRouter API call failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions",
+      "passed": false
     },
     {
       "test_id": "test_2",
       "question": "What is the tax rate for Contractors under Malta Income Tax Act Article 56(13)?",
-      "answer": "Based on the provided documents, there are two relevant tax rates for Contractors under the Malta Income Tax Act:\n\n1. For Contractors' chargeable income:\n\"35 cents (\u20ac0.35) on every euro of the chargeable income\" [Income Tax Act Cap. 123, Article 56(13)(a)]\n\n2. For withholding tax on payments to sub-contractors:\n\"10 cents (\u20ac0.10) of every euro of the payments\" [Income Tax Act Cap. 123, Article 56(13)(b)]\n\nThe law also specifies that \"Other income arising to a Contractor shall be charged at the appropriate rate or rates\" [Income Tax Act Cap. 123, Article 56(13)(a)], though the specific rates for other income are not provided in the available documents.",
-      "confidence": 1.0,
-      "grounded": true,
-      "citation_accuracy": 1.0,
-      "passed": true,
-      "issues": []
+      "error": "OpenRouter API call failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions",
+      "passed": false
     },
     {
       "test_id": "test_3",
       "question": "When does property transfer occur in a sale contract according to Malta Civil Code Article 1347?",
-      "answer": "[LOW CONFIDENCE - 0.00] Based on [Civil Code Cap. 16, Article 1347], property transfer in a sale contract occurs \"as soon as the thing and the price have been agreed upon, although the thing has not yet been delivered nor the price paid.\"\n\nThe exact text states: \"A sale is complete between the parties, and, as regards the seller, the property of the thing is transferred to the buyer, as soon as the thing and the price have been agreed upon, although the thing has not yet been delivered nor the price paid; and from that moment the thing itself remains at the risk and for the benefit of the buyer.\"\n\nThis means that property transfer occurs at the moment of agreement on both:\n1. The thing being sold\n2. The price\n\nThe transfer happens regardless of whether:\n- Physical delivery has taken place\n- Payment has been made\n\nAfter this point, according to the same article, the thing remains \"at the risk and for the benefit of the buyer.\"",
-      "confidence": 0.0,
-      "grounded": true,
-      "citation_accuracy": 0.0,
-      "passed": false,
-      "issues": [
-        "Low confidence: 0.00",
-        "Missing: 'thing and price'"
-      ]
+      "error": "OpenRouter API call failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions",
+      "passed": false
     }
   ]
 }
