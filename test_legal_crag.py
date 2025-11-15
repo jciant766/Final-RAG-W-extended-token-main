@@ -7,7 +7,7 @@ from legal_crag import LegalCRAG, VoyageVectorDB
 
 # Set API keys
 os.environ['VOYAGE_API_KEY'] = 'pa-1fb-bYoXcy9MYbKYkXhqSKGwJrcRX40hVVTLoa5FFA8'
-os.environ['OPENROUTER_API_KEY'] = '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'
+os.environ['OPENROUTER_API_KEY'] = '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'
 
 # VERIFIED EXACT QUOTES from user - directly from legislation.mt
 TEST_DOCUMENTS = [
