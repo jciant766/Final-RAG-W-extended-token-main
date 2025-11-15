@@ -1,12 +1,11 @@
-"""Legal CRAG System for Malta Law - Production-ready pipeline with validation."""
+"""Legal CRAG System for Malta Law - with Voyage embeddings and OpenRouter LLM."""
 
 import os
 import re
 from typing import List, Dict, Optional, Literal
 from dataclasses import dataclass
 from enum import Enum
-from openai import OpenAI
-from anthropic import Anthropic
+import requests
 from dotenv import load_dotenv
 
 
@@ -63,7 +62,7 @@ class CRAGResponse:
 
 
 class LegalCRAG:
-    """Corrective RAG pipeline: Retrieve → Grade → Generate → Validate"""
+    """Corrective RAG pipeline with Voyage Law embeddings and OpenRouter LLM."""
 
     CONFIDENCE_THRESHOLD = 0.85
 
@@ -93,11 +92,12 @@ Relevant Documents:
 
 CRITICAL INSTRUCTIONS:
 1. Answer ONLY using the provided documents above
-2. Cite ALL sources as [Document Title, Article X] or [Document Title, Page Y]
-3. If documents don't fully answer the question, say "Based on available documents..."
-4. NEVER use general legal knowledge or information not in the documents
-5. If you cannot answer from the documents, say "Insufficient information in retrieved documents"
-6. Include specific article numbers and exact quotes when possible
+2. Cite ALL sources as [Document Title, Article X] with EXACT article numbers
+3. Quote EXACT text from the documents - do not paraphrase
+4. If documents don't fully answer the question, say "Based on available documents..."
+5. NEVER use general legal knowledge or information not in the documents
+6. If you cannot answer from the documents, say "Insufficient information in retrieved documents"
+7. Verify all article numbers are correct before citing them
 
 Your answer:"""
 
@@ -113,7 +113,7 @@ Validation Checklist:
 1. Is every claim in the answer found in the source documents?
 2. Do all article citations actually exist in the documents?
 3. Do all numbers (fines, percentages, dates) match exactly?
-4. Are quotes accurate?
+4. Are quotes accurate word-for-word?
 5. Is the jurisdiction (Malta) correct?
 
 Respond in this EXACT format:
@@ -125,9 +125,10 @@ Your validation:"""
 
     def __init__(
         self,
-        llm_provider: Literal["openai", "anthropic"] = "openai",
+        llm_provider: Literal["openrouter"] = "openrouter",
         model_name: Optional[str] = None,
-        api_key: Optional[str] = None
+        api_key: Optional[str] = None,
+        openrouter_api_key: Optional[str] = None
     ):
         load_dotenv()
         if os.path.exists('env'):
@@ -135,41 +136,34 @@ Your validation:"""
 
         self.llm_provider = llm_provider
 
-        if llm_provider == "openai":
-            api_key = api_key or os.getenv("OPENAI_API_KEY")
-            if not api_key:
-                raise ValueError("OPENAI_API_KEY not found")
-            self.client = OpenAI(api_key=api_key)
-            self.model = model_name or "gpt-4"
-        elif llm_provider == "anthropic":
-            api_key = api_key or os.getenv("ANTHROPIC_API_KEY")
-            if not api_key:
-                raise ValueError("ANTHROPIC_API_KEY not found")
-            self.client = Anthropic(api_key=api_key)
-            self.model = model_name or "claude-3-5-sonnet-20241022"
-        else:
-            raise ValueError(f"Unsupported LLM provider: {llm_provider}")
+        # OpenRouter API key
+        self.openrouter_api_key = openrouter_api_key or os.getenv("OPENROUTER_API_KEY")
+        if not self.openrouter_api_key:
+            raise ValueError("OPENROUTER_API_KEY not found")
+
+        # Default to a strong reasoning model
+        self.model = model_name or "anthropic/claude-3.5-sonnet"
 
     def _call_llm(self, prompt: str, max_tokens: int = 2000) -> str:
+        """Call OpenRouter API."""
         try:
-            if self.llm_provider == "openai":
-                response = self.client.chat.completions.create(
-                    model=self.model,
-                    messages=[{"role": "user", "content": prompt}],
-                    max_tokens=max_tokens,
-                    temperature=0.0
-                )
-                return response.choices[0].message.content.strip()
-            else:
-                response = self.client.messages.create(
-                    model=self.model,
-                    max_tokens=max_tokens,
-                    temperature=0.0,
-                    messages=[{"role": "user", "content": prompt}]
-                )
-                return response.content[0].text.strip()
+            response = requests.post(
+                "https://openrouter.ai/api/v1/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {self.openrouter_api_key}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "model": self.model,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": max_tokens,
+                    "temperature": 0.0
+                }
+            )
+            response.raise_for_status()
+            return response.json()["choices"][0]["message"]["content"].strip()
         except Exception as e:
-            raise RuntimeError(f"LLM call failed: {str(e)}")
+            raise RuntimeError(f"OpenRouter API call failed: {str(e)}")
 
     def grade_documents(self, question: str, documents: List[Dict]) -> List[DocumentGrade]:
         """Grade each retrieved document for relevance."""
@@ -388,21 +382,22 @@ Your validation:"""
         return response
 
 
-class SimpleVectorDB:
-    """In-memory vector database for testing."""
+class VoyageVectorDB:
+    """Vector database using Voyage Law embeddings."""
 
-    def __init__(self):
+    def __init__(self, voyage_api_key: Optional[str] = None):
         self.documents: List[Dict] = []
         self.embeddings: List[List[float]] = []
 
         load_dotenv()
         if os.path.exists('env'):
             load_dotenv('env', override=True)
-        api_key = os.getenv("OPENAI_API_KEY")
-        if not api_key:
-            raise ValueError("OPENAI_API_KEY not found")
-        self.client = OpenAI(api_key=api_key)
-        self.embedding_model = "text-embedding-3-large"
+
+        self.voyage_api_key = voyage_api_key or os.getenv("VOYAGE_API_KEY")
+        if not self.voyage_api_key:
+            raise ValueError("VOYAGE_API_KEY not found")
+
+        self.embedding_model = "voyage-law-2"
 
     def add_documents(self, documents: List[Dict]):
         """Add documents to the database."""
@@ -434,11 +429,23 @@ class SimpleVectorDB:
         return results
 
     def _embed_text(self, text: str) -> List[float]:
-        response = self.client.embeddings.create(
-            model=self.embedding_model,
-            input=text
-        )
-        return response.data[0].embedding
+        """Generate embedding using Voyage Law API."""
+        try:
+            response = requests.post(
+                "https://api.voyageai.com/v1/embeddings",
+                headers={
+                    "Authorization": f"Bearer {self.voyage_api_key}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "input": text,
+                    "model": self.embedding_model
+                }
+            )
+            response.raise_for_status()
+            return response.json()["data"][0]["embedding"]
+        except Exception as e:
+            raise RuntimeError(f"Voyage API call failed: {str(e)}")
 
     def _cosine_similarity(self, vec1: List[float], vec2: List[float]) -> float:
         dot_product = sum(a * b for a, b in zip(vec1, vec2))

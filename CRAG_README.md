@@ -1,15 +1,16 @@
 # Legal CRAG System for Malta Law
 
-Production-ready Corrective RAG pipeline with validation to prevent hallucinations.
+Production-ready Corrective RAG pipeline with **Voyage Law embeddings** and **OpenRouter LLM**, validated against exact quotes from Malta legislation.
 
 ## Features
 
+- **Voyage Law Embeddings**: Specialized legal embeddings via Voyage AI
+- **OpenRouter LLM**: Flexible LLM provider with multiple models
 - **Document Grading**: LLM filters irrelevant docs (RELEVANT/IRRELEVANT/PARTIAL)
 - **Answer Validation**: Verifies every claim against sources
-- **Citation Enforcement**: Requires [Document, Article X] format
+- **Citation Enforcement**: Requires exact [Document, Article X] format
 - **Confidence Scoring**: 0-1 scale with 0.85 threshold
-- **Legal Validation**: Checks jurisdiction, article numbers, exact figures
-- **Multi-LLM**: OpenAI GPT-4 or Anthropic Claude
+- **Exact Quote Verification**: Uses verified text from Malta legislation OCR files
 
 ## Architecture
 
@@ -17,10 +18,10 @@ Production-ready Corrective RAG pipeline with validation to prevent hallucinatio
 Retrieve → Grade → Generate → Validate
 ```
 
-1. **Retrieve**: Get 5-15 docs from vector DB
-2. **Grade**: Filter irrelevant (Malta jurisdiction check)
-3. **Generate**: Answer using ONLY relevant docs + citations
-4. **Validate**: Verify claims, citations, numbers
+1. **Retrieve**: Voyage Law embeddings find relevant docs
+2. **Grade**: OpenRouter LLM filters irrelevant (Malta jurisdiction check)
+3. **Generate**: Answer using ONLY relevant docs + exact citations
+4. **Validate**: Verify claims, article numbers, exact figures
 
 ## Quick Start
 
@@ -28,7 +29,13 @@ Retrieve → Grade → Generate → Validate
 
 ```bash
 pip install -r Requirements.txt
-export OPENAI_API_KEY="sk-your-key-here"
+```
+
+### Set API Keys
+
+```bash
+export VOYAGE_API_KEY="pa-your-key-here"
+export OPENROUTER_API_KEY="sk-or-v1-your-key-here"
 ```
 
 ### Test
