@@ -1,0 +1,90 @@
+═══════════════════════════════════════════════════════════════
+COPY THIS ENTIRE PROMPT AND PASTE TO ChatGPT/Claude/ANY LLM
+═══════════════════════════════════════════════════════════════
+
+You are helping extract Malta law articles from legislation.mt for a legal RAG system.
+
+TASK: Identify and format articles from the provided legal text.
+
+RULES FOR IDENTIFYING ARTICLES:
+1. ARTICLE = A number followed by a period (e.g., "15.", "320.", "1234.")
+   - The number is usually in BOLD in the source
+   - Must be just a number + period (not "CAP.540" or other prefixes)
+   - Example: "15." is an article, "CAP.540.]" is NOT
+
+2. SUB-ARTICLE = A number in parentheses (e.g., "(1)", "(2)", "(a)", "(b)")
+   - Always belongs to the preceding article
+   - Can be nested: "(1)" can contain "(a)", "(b)", etc.
+   - Example: "15.(1)" means Article 15, sub-article 1
+
+3. ARTICLE vs SUB-ARTICLE EXAMPLES:
+   - "15." ← ARTICLE (number + period)
+   - "(1)" ← SUB-ARTICLE (number in parentheses)
+   - "15.(1)" ← Article 15, sub-article 1
+   - "(a)" ← SUB-ARTICLE nested under a numbered sub-article
+
+OUTPUT FORMAT:
+For each article or related group of articles, output EXACTLY like this:
+
+---
+ACT: [Name of the Act]
+CITATION: [Act Name Cap. X, Article Y-Z]
+ARTICLES: [Article number(s)]
+TOPIC: [Brief description of what this covers]
+---
+
+[Full text of article(s) exactly as written, including all sub-articles]
+
+---
+
+GROUPING RULES:
+- If 2-4 sequential articles share the same topic → GROUP them together
+- If an article is standalone or different topic → SEPARATE chunk
+- Each article MUST include ALL its sub-articles
+- Target: 150-400 tokens per group
+
+EXAMPLE INPUT/OUTPUT:
+
+Input text:
+"""
+320. Ownership is the right of enjoying and disposing of things in the most absolute manner, provided no use thereof is made which is prohibited by law.
+
+321. No person can be compelled to give up his property or to permit any other person to make use of it, except for a public purpose, and upon payment of a fair compensation.
+
+322. (1) Save as otherwise provided by law, the owner of a thing has the right to recover it from any possessor.
+
+(2) A possessor who, after being notified of the judicial demand for the recovery of the thing ceases of his own act, to possess such thing, is bound, at his own expense, to regain possession of the thing for the plaintiff, or, if unable to do so, to make good its value, unless the plaintiff elects to proceed against the actual possessor.
+"""
+
+Output:
+---
+ACT: Civil Code
+CITATION: Civil Code Cap. 16, Article 320-322
+ARTICLES: 320-322
+TOPIC: Ownership
+---
+
+320. Ownership is the right of enjoying and disposing of things in the most absolute manner, provided no use thereof is made which is prohibited by law.
+
+321. No person can be compelled to give up his property or to permit any other person to make use of it, except for a public purpose, and upon payment of a fair compensation.
+
+322. (1) Save as otherwise provided by law, the owner of a thing has the right to recover it from any possessor.
+
+(2) A possessor who, after being notified of the judicial demand for the recovery of the thing ceases of his own act, to possess such thing, is bound, at his own expense, to regain possession of the thing for the plaintiff, or, if unable to do so, to make good its value, unless the plaintiff elects to proceed against the actual possessor.
+
+---
+
+IMPORTANT:
+- Copy text EXACTLY from source (word-for-word)
+- Include ALL sub-articles with their parent article
+- Remove any "CAP.XXX.]" headers
+- Keep article numbers as they appear
+- Use the exact format with --- separators
+
+Now process the following legal text from legislation.mt:
+
+═══════════════════════════════════════════════════════════════
+PASTE YOUR TEXT FROM LEGISLATION.MT BELOW THIS LINE:
+═══════════════════════════════════════════════════════════════
+
+[PASTE TEXT HERE]
